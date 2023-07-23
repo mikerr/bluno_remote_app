@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+
+
+    <Button
+        android:id="@+id/buttonScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Scan" />
+
+    <EditText
+        android:id="@+id/serialSendText"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="#555555"
+        android:bufferType="editable"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Data sending Area"
+        android:textColor="#999999"
+        android:layout_alignParentTop="true"
+        android:textSize="20dip" />
+
+    <Button
+        android:id="@+id/buttonSerialSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:layout_alignLeft="@+id/serialSendText"
+        android:text="Send Data" />
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/serialSendText"
+        android:layout_below="@+id/serialSendText"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="Received Data:"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/serialReveicedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:ems="10"
+        android:textSize="10sp" />
+
+
+    <ImageView
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:scaleType="fitCenter"
+        android:id="@+id/btnUp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/serialReveicedText"
+        android:layout_alignStart="@+id/btnDown"
+        android:onClick="upClicked"
+        android:src="@drawable/up" />
+
+    <ImageView
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:scaleType="fitCenter"
+        android:id="@+id/btnCenter"
+        android:layout_below="@+id/btnUp"
+        android:layout_alignStart="@+id/btnDown"
+        android:onClick="centerClicked" />
+
+    <ImageView
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:scaleType="fitCenter"
+        android:id="@+id/btnDown"
+        android:focusable="true"
+        android:layout_below="@+id/btnCenter"
+        android:layout_marginStart="100dp"
+        android:onClick="downClicked"
+        android:src="@drawable/down"/>
+
+    <ImageView
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:scaleType="fitCenter"
+        android:id="@+id/btnLeft"
+        android:layout_alignTop="@+id/btnCenter"
+        android:onClick="leftClicked"
+        android:src="@drawable/left"/>
+
+    <ImageView
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:scaleType="fitCenter"
+        android:id="@+id/btnRight"
+        android:layout_below="@+id/btnUp"
+        android:layout_alignTop="@+id/btnLeft"
+        android:layout_alignStart="@+id/btnDown"
+        android:layout_marginStart="100dp"
+        android:onClick="rightClicked"
+        android:src="@drawable/right"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gyro"
+        android:id="@+id/gyro"
+        android:layout_alignBottom="@+id/btnDown"
+        android:layout_alignStart="@+id/btnRight"
+        android:singleLine="true"
+        android:checked="false"
+        android:onClick="gyroClicked" />
+
+    <ImageView
+        android:id="@+id/btnA"
+        android:onClick="AClicked"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_alignTop="@+id/btnDown"
+        android:layout_alignStart="@+id/btnDown"
+        android:layout_marginStart="300dp"
+        android:src="@android:drawable/presence_invisible" />
+
+    <ImageView
+        android:id="@+id/btnY"
+        android:onClick="YClicked"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_alignTop="@+id/btnUp"
+        android:layout_alignStart="@+id/btnUp"
+        android:layout_marginStart="300dp"
+        android:src="@android:drawable/presence_invisible" />
+
+    <ImageView
+        android:id="@+id/btnB"
+        android:onClick="BClicked"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_alignTop="@+id/btnRight"
+        android:layout_alignStart="@+id/btnRight"
+        android:layout_marginStart="300dp"
+        android:src="@android:drawable/presence_online" />
+
+    <ImageView
+        android:id="@+id/btnX"
+        android:onClick="XClicked"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_alignTop="@+id/btnLeft"
+        android:layout_alignStart="@+id/btnLeft"
+        android:layout_marginStart="300dp"
+        android:src="@android:drawable/presence_online" />
+
+
+</RelativeLayout>
